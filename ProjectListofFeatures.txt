@@ -4,7 +4,7 @@
 -Favourite Replies
 -View Threads and Replies
 -Delete Threads and Replies
--Pagination
+-Pagination of pages with multiple posts
 -User Profile with recent Activity (likes, replies, posts)
 -Browse Threads (All threads, My threads, Most replied to, Unreplied threads)
 -Make Post to sub-forum category
