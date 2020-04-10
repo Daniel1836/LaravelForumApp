@@ -8,5 +8,5 @@
 -User Profile with recent Activity (likes, replies, posts)
 -Browse Threads (All threads, My threads, Most replied to, Unreplied threads)
 -Make Post to sub-forum category
--All posts, replies, likes are timestamped and displayed dynamically
+-All posts, replies, likes are timestamped and displayed dynamically on user Profile
 -View Posts browse by Category
