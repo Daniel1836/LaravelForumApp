@@ -63,19 +63,8 @@ class Thread extends Model
      return 'Y-m-d H:i:s.u';
 }
 
-     public function suscribe($userId = null){
-         
-         $this->subscriptions()->create([
-             'user_id' => $userId ?: auth()->id()
-             ]);
-     }
-     
-     public function subscriptions(){
-         
-         return $this->hasMany(ThreadSubscription::class);
-     }
-     
    
      
+   
    
 }
