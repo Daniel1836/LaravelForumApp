@@ -19,7 +19,7 @@ Route::get('threads.php/{channel}', 'ThreadsController@index');
 Route::delete('/replies/{reply}', 'RepliesController@destroy');
 Route::post('/replies/{reply}/favorites', 'FavoritesController@store');
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
-Route::post('threads.php/{channel}/{thread}/subscriptions', 'ThreadSubscriptionsController@store')->middleware('auth');
+
 
 
 
