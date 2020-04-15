@@ -11,3 +11,4 @@
 -All posts, replies, likes are timestamped and displayed dynamically on User Profile
 -View Posts browse by SubForum Category
 -Logout
+-Funtional interaction dependant on authorization
