@@ -10,3 +10,4 @@
 -Make Post to sub-forum category
 -All posts, replies, likes are timestamped and displayed dynamically on User Profile
 -View Posts browse by SubForum Category
+-Logout
