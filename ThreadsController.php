@@ -11,10 +11,18 @@ use Carbon\Carbon;
 
 class ThreadsController extends Controller {
     
+     /*
+    ThreadsController constreuctor
+    */
+    
     public function __construct()
     {
         $this->middleware('auth')->except(['index','show']);
     }
+    
+    /*
+    Display a listing of the resource
+    */
     
     public function index(Channel $channel, ThreadFilters $filters) {
         
@@ -33,6 +41,10 @@ class ThreadsController extends Controller {
         return view('threads', compact('threads'));
     }
     
+     /*
+    Display the specified resource
+    */
+    
     public function show($channelId, Thread $thread){
         
         
@@ -41,6 +53,10 @@ class ThreadsController extends Controller {
            'replies' => $thread->replies()->paginate(1)
            ]);
     }
+    
+     /*
+    Delete a resource
+    */
     
     public function destroy($channel, Thread $thread){
         
@@ -52,6 +68,10 @@ class ThreadsController extends Controller {
         }
         return redirect('/threads.php');
     }
+    
+     /*
+    Store a newly created resource in storage
+    */
     
     public function store(Request $request)
     {
@@ -72,6 +92,10 @@ class ThreadsController extends Controller {
             return redirect($thread->path());
     }
     
+     /*
+    Show the form for creating a new resource
+    */
+    
     public function create()
     {
         return view('createthd');
@@ -80,4 +104,3 @@ class ThreadsController extends Controller {
   
 }
 
-?>
