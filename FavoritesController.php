@@ -9,9 +9,17 @@ use App\Favorite;
 
 class FavoritesController extends Controller {
     
+     /*
+    Create a new controller instance
+    */
+    
     public function __construct(){
         $this->middleware('auth');
     }
+    
+     /*
+    Store a new favourite in the database
+    */
     
     public function store(Reply $reply){
         
