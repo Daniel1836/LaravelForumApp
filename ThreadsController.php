@@ -12,7 +12,7 @@ use Carbon\Carbon;
 class ThreadsController extends Controller {
     
      /*
-    ThreadsController constreuctor
+    ThreadsController constructor
     */
     
     public function __construct()
