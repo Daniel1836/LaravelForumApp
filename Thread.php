@@ -9,7 +9,15 @@ class Thread extends Model
     
     use RecordsActivity;
     
+     /*
+    Don't auto-apply mass assignment protection
+    */
+    
     protected $guarded = [];
+    
+     /*
+    The relationships to always eager load
+    */
     
     protected $with = ['creator', 'channel'];
     
@@ -28,7 +36,7 @@ class Thread extends Model
     }
     
       /*
-    Get a sting path for the thread
+    Get a string path for the thread
     */
     
     public function path()
