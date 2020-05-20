@@ -27,22 +27,36 @@ class Thread extends Model
       
     }
     
-     
+      /*
+    Get a sting path for the thread
+    */
     
     public function path()
     {
         return "/threads.php/{$this->channel->slug}/{$this->id}";
     }
     
+     /*
+    A thread may have many replies
+    */
+    
     public function replies()
     {
         return $this->hasMany(Reply::class);
     }
     
+     /*
+    A thread belongs to a creator
+    */
+    
     public function creator()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    
+     /*
+    Add a reply to a thread
+    */
     
     public function addReply($reply)
     {
