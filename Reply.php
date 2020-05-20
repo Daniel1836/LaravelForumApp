@@ -17,7 +17,10 @@ class Reply extends Model
 {
      return 'Y-m-d H:i:s.u';
 }
-
+ /*
+    A reply has a owner
+    */
+     
 public function owner(){
     return $this->belongsTo(User::class, 'user_id');
 }
@@ -25,7 +28,11 @@ public function owner(){
 public function favorites(){
    return $this->morphMany(Favorite::class, 'favorited');
 }
-
+     
+ /*
+    Favourite the current reply
+    */
+     
 public function favorite(){
     
     $attributes = ['user_id' => auth()->id()];
