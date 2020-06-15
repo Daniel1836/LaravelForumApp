@@ -6,14 +6,18 @@ use Illuminate\Http\Request;
 use App\Thread;
 use App\Reply;
 
-class RepliesController extends Controller {
+class RepliesController extends Controller 
+
+{
     
     public function __construct()
+        
     {
         $this->middleware('auth');
     }
     
     public function store($channelId, Thread $thread)
+        
     {
         
         $this->validate(request(), ['body' => 'required']);
@@ -25,9 +29,11 @@ class RepliesController extends Controller {
             ]);
             
             return back();
-    }
+     }
     
-    public function destroy(Reply $reply){
+    public function destroy(Reply $reply)
+        
+    {
         
        $this->authorize('update', $reply);
         
@@ -38,4 +44,4 @@ class RepliesController extends Controller {
     
 }
 
-?>
+
