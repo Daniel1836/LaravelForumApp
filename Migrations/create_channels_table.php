@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateChannelsTable extends Migration
+    
 {
     /**
      * Run the migrations.
@@ -12,8 +13,10 @@ class CreateChannelsTable extends Migration
      * @return void
      */
     public function up()
+        
     {
-        Schema::create('channels', function (Blueprint $table) {
+        Schema::create('channels', function (Blueprint $table)
+       {
             $table->increments('id');
             $table->string('name',50);
             $table->string('slug',50);
@@ -26,8 +29,10 @@ class CreateChannelsTable extends Migration
      *
      * @return void
      */
+    
     public function down()
+        
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('');
     }
 }
