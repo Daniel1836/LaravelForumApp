@@ -9,13 +9,16 @@ use App\Filters\ThreadFilters;
 use Carbon\Carbon;
 
 
-class ThreadsController extends Controller {
+class ThreadsController extends Controller
+
+{
     
      /*
     ThreadsController constructor
     */
     
     public function __construct()
+        
     {
         $this->middleware('auth')->except(['index','show']);
     }
@@ -24,29 +27,32 @@ class ThreadsController extends Controller {
     Display a listing of the resource
     */
     
-    public function index(Channel $channel, ThreadFilters $filters) {
+    public function index(Channel $channel, ThreadFilters $filters)
+    
+    {
         
         
         $threads = Thread::latest()->filter($filters);
         
-        if ($channel->exists) {
+        if ($channel->exists) 
+            
+        {
             $threads->where('channel_id', $channel->id);
         } 
-        
-     
         
         $threads=$threads->filter($filters)->get();
      
       
         return view('threads', compact('threads'));
-    }
+     }
     
      /*
     Display the specified resource
     */
     
-    public function show($channelId, Thread $thread){
-        
+    public function show($channelId, Thread $thread)
+    
+    {
         
        return view('show', [
            'thread' => $thread,
@@ -58,12 +64,15 @@ class ThreadsController extends Controller {
     Delete a resource
     */
     
-    public function destroy($channel, Thread $thread){
+    public function destroy($channel, Thread $thread)
+    
+    {
         
         $this->authorize('update', $thread);
         $thread->delete();
         
-        if (request()->wantsJson()){
+        if (request()->wantsJson())
+        {
         return response([], 204);
         }
         return redirect('/threads.php');
@@ -74,6 +83,7 @@ class ThreadsController extends Controller {
     */
     
     public function store(Request $request)
+        
     {
         
         $this->validate($request, [
@@ -90,13 +100,14 @@ class ThreadsController extends Controller {
             'body' => request('body')
             ]);
             return redirect($thread->path());
-    }
+     }
     
      /*
     Show the form for creating a new resource
     */
     
     public function create()
+        
     {
         return view('createthd');
     }
