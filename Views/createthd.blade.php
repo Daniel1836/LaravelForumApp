@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-  <body>
+ <body>
        <div class="navdiv">
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
                 <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,20 +15,18 @@
                 <div class="row thread">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="panel panel-default">
-                             <div class="panel-heading">Create a new Thread</div>
+                           <div class="panel-heading">Create a new Thread</div>
                             <div class="panel-body">
                                 <form method="POST" action="/threads.php">
                                     {{csrf_field()}}
-                                    
-                                      <div class="form-group">
+                                    <div class="form-group">
                                         <label for="channel_id">Choose a Channel:</label>
                                         <select name="channel_id" class="form-control" id="channel_id" required>
                                             <option value="">Choose One...</option>
-                                            
                                             @foreach ($channels as $channel)
                                             <option value="{{ $channel->id}}" {{old('channel_id')==$channel->id? 'selected' : ''}}>{{ $channel->name}}</option>
                                             @endforeach
-                                            </select>
+                                         </select>
                                     </div>
                                     
                                     <div class="form-group">
@@ -46,7 +43,7 @@
                                     <button type="submit" class="btn btn-primary">Publish</button>
                                     </div>
                                     
-                                     @if(count($errors))
+                                    @if(count($errors))
                                 <ul class="alert alert-danger">
                                     @foreach ($errors->all() as $error)
                                     
@@ -55,14 +52,10 @@
                                 </ul>
                                      @endif
                                 </form>
-                               
-                            </div>
+                              </div>
                             </div>
                     </div>
                 </div>
            </div>
-                           
-                            
-                            
-  </body>
+      </body>
   </html>
