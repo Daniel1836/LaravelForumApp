@@ -8,13 +8,14 @@ use App\Thread;
 use App\Reply;
 use App\Activity;
 
-class ProfilesController extends Controller{
+class ProfilesController extends Controller
     
-    public function show(User $user){
-      
-        
-      
-        return view('profileshow', [
+{
+    
+    public function show(User $user)
+       
+    {
+            return view('profileshow', [
             
             'profileUser' => $user,
             'activities' => Activity::feed($user)
