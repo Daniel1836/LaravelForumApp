@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-        <body>
-                    <div class="navdiv">
+     <body>
+         <div class="navdiv">
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
                 <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
-               <div><a class="navbar-brand" href="#">Laravel Forum App</a></div>
+                  <div><a class="navbar-brand" href="#">Laravel Forum App</a></div>
                <li class="dropdown">
                    <a href="#" class="dropdown-toggle browse" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse</a>
                    <ul class="dropdown-menu">
@@ -70,6 +69,6 @@
            
             </div>
         </div>
-        </div>
-        </body>
-        </html>
+      </div>
+   </body>
+</html>
