@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
+    
 {
     
     use RecordsActivity;
@@ -22,16 +23,18 @@ class Thread extends Model
     protected $with = ['creator', 'channel'];
     
     protected static function boot()
+        
     {
         parent::boot();
         
-     
-        static::deleting(function ($thread){
-           $thread->replies->each(function ($reply){
+        static::deleting(function ($thread)
+         {
+           $thread->replies->each(function ($reply)
+             {
                $reply->delete();
-           });
+             });
             
-            });
+         });
       
     }
     
@@ -40,6 +43,7 @@ class Thread extends Model
     */
     
     public function path()
+        
     {
         return "/threads.php/{$this->channel->slug}/{$this->id}";
     }
@@ -49,6 +53,7 @@ class Thread extends Model
     */
     
     public function replies()
+        
     {
         return $this->hasMany(Reply::class);
     }
@@ -58,6 +63,7 @@ class Thread extends Model
     */
     
     public function creator()
+        
     {
         return $this->belongsTo(User::class, 'user_id');
     }
@@ -67,26 +73,28 @@ class Thread extends Model
     */
     
     public function addReply($reply)
+        
     {
         $this->replies()->create($reply);
     }
     
     public function channel()
+        
     {
         return $this->belongsTo(Channel::class);
     }
     
     public function scopeFilter($query, $filters)
+        
     {
         return $filters->apply($query);
     }
+    
      public function getDateFormat()
+         
 {
      return 'Y-m-d H:i:s.u';
 }
 
-   
-     
-   
    
 }
