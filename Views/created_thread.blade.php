@@ -5,11 +5,9 @@
                             {{ $profileUser->name }} published
                             <a href="{{ $activity->subject->path() }}">{{ $activity->subject->title }}</a>
                          </span>
-                       
                      </div>
-                     
                  </div>
-                 <div class="panel-body">
+                   <div class="panel-body">
                      {{ $activity->subject->body }}
-                 </div>
-             </div>
+                   </div>
+            </div>
