@@ -6,9 +6,9 @@
 -Delete Threads and Replies
 -Pagination of pages with multiple posts
 -User Profile with recent Activity (likes, replies, posts)
--Browse Threads (All threads, My threads, Most replied to, Unreplied threads ordered by latest)
+-Browse Threads (All threads, My threads, Most replied to, Unreplied threads (ordered by latest))
 -Make Post to sub-forum category
 -All posts, replies, likes are timestamped and displayed dynamically on User Profile
--View Posts browse by SubForum Category
+-View Posts. Browse by SubForum Category
 -Logout
 -Funtional interaction dependant on authorization
