@@ -8,18 +8,24 @@ use App\Favorite;
 use Illuminate\Database\Eloquent\Model;
 
 class Activity extends Model
+  
 {
   protected $guarded = [];
   
-  public function subject(){
+  public function subject()
+  {
       return $this->morphTo();
   }
     
-         public function getDateFormat()
+   public function getDateFormat()
+     
 {
      return 'Y-m-d H:i:s.u';
 }
- public static function feed($user, $take=50){
+  
+ public static function feed($user, $take=50)
+ 
+ {
      
       return static::where('user_id', $user->id)
       ->latest()
@@ -28,7 +34,7 @@ class Activity extends Model
       ->get()
       ->groupBy(function ($activity) {
             return $activity->created_at->format('Y-m-d');
-        });
+   });
  }
 
 }
