@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
         <body>
-                    <div class="navdiv">
+          <div class="navdiv">
             <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
                 <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -72,8 +71,7 @@
    </div>
   </article>
   <hr>
-
-                          </div>
+                       </div>
                    @empty
                    <p>There are no relevant results at this time.</p>
                      @endforelse
