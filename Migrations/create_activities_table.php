@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateActivitiesTable extends Migration
+    
 {
     /**
      * Run the migrations.
@@ -12,8 +13,10 @@ class CreateActivitiesTable extends Migration
      * @return void
      */
     public function up()
+        
     {
-        Schema::create('activities', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) 
+          {
             $table->increments('id');
             $table->unsignedInteger('user_id')->index();
             $table->unsignedInteger('subject_id')->index();
@@ -21,8 +24,7 @@ class CreateActivitiesTable extends Migration
             $table->string('type', 50);
             $table->timestamps();
             
-          
-        });
+           });
     }
 
     /**
@@ -31,7 +33,8 @@ class CreateActivitiesTable extends Migration
      * @return void
      */
     public function down()
+        
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('');
     }
 }
