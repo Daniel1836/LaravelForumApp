@@ -18,7 +18,7 @@ class Reply extends Model
        protected $guarded = [];
        
        /*
-      The relations to eager load on every query.
+      Eager loaded on every query.
      */
      
        protected $with = ['owner'];
