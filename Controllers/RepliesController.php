@@ -9,6 +9,9 @@ use App\Reply;
 class RepliesController extends Controller 
 
 {
+       /*
+      Create a new RepliesController instance.
+     */
     
     public function __construct()
         
@@ -16,6 +19,10 @@ class RepliesController extends Controller
         $this->middleware('auth');
     }
     
+     /*
+      Persist a new reply.
+     */
+     
     public function store($channelId, Thread $thread)
         
     {
