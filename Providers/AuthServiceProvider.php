@@ -8,10 +8,8 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 class AuthServiceProvider extends ServiceProvider
     
 {
-    /**
-     * The policy mappings for the application.
-     *
-     * @var array
+    /*
+     The policy mappings for the application.
      */
     
     protected $policies = [
@@ -19,11 +17,8 @@ class AuthServiceProvider extends ServiceProvider
          'App\Reply' => 'App\Policies\ReplyPolicy',
     ];
 
-    /**
-     * Register any application authentication / authorization services.
-     *
-     * @param  \Illuminate\Contracts\Auth\Access\Gate  $gate
-     * @return void
+    /*
+      Register any application authentication / authorization services.
      */
     
     public function boot(GateContract $gate)
