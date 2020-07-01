@@ -4,6 +4,10 @@ namespace App;
 
 trait RecordsActivity{
     
+     /*
+      Boot the trait.
+     */
+    
     protected static function bootRecordsActivity()
     
     {
@@ -28,11 +32,19 @@ trait RecordsActivity{
        });
     }
     
+    /*
+    Fetch all model events that require activity recording.
+      */
+    
      protected static function getActivitiesToRecord()
          
        {
            return ['created'];
        }
+    
+    /*
+    Record new activity for the model.
+        */
     
        protected function recordActivity($event)
        
@@ -43,6 +55,9 @@ trait RecordsActivity{
             'type' => $this->getActivityType($event)
             ]);
        }
+    /*
+    Determine the activity type.
+    */
     
         protected function getActivityType($event)
         
