@@ -22,6 +22,10 @@ class Thread extends Model
     
     protected $with = ['creator', 'channel'];
     
+    /**
+     * Boot the model.
+     */
+    
     protected static function boot()
         
     {
@@ -83,6 +87,10 @@ class Thread extends Model
     {
         return $this->belongsTo(Channel::class);
     }
+    
+ /*
+    Apply all relevant thread filters.
+         */
     
     public function scopeFilter($query, $filters)
         
