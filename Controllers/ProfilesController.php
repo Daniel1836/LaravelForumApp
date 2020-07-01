@@ -11,6 +11,9 @@ use App\Activity;
 class ProfilesController extends Controller
     
 {
+       /*
+      Show the user's profile.
+     */
     
     public function show(User $user)
        
