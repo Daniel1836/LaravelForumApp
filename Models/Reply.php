@@ -11,8 +11,16 @@ class Reply extends Model
 {
        use RecordsActivity;
      
+       /*
+      Don't auto-apply mass assignment protection.
+     */
+     
        protected $guarded = [];
        
+       /*
+      The relations to eager load on every query.
+     */
+     
        protected $with = ['owner'];
        
     public function getDateFormat()
