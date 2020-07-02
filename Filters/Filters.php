@@ -9,12 +9,19 @@ abstract class Filters
     
     protected $request, $builder;
     
+      /*
+      Create a new ThreadFilters instance.
+     */
     
      public function __construct(Request $request)
          
     {
         $this->request = $request;
     }
+    
+      /*
+      Apply the filters
+     */
     
      public function apply($builder)
          
@@ -32,6 +39,10 @@ abstract class Filters
              return $this->builder;
         
     }
+    
+      /*
+       Fetch all relevant filters from the request.
+     */
         
         public function getFilters()
         
