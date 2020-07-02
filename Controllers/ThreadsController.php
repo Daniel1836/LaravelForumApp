@@ -31,7 +31,6 @@ class ThreadsController extends Controller
     
     {
         
-        
         $threads = Thread::latest()->filter($filters);
         
         if ($channel->exists) 
@@ -42,7 +41,6 @@ class ThreadsController extends Controller
         
         $threads=$threads->filter($filters)->get();
      
-      
         return view('threads', compact('threads'));
      }
     
@@ -112,6 +110,5 @@ class ThreadsController extends Controller
         return view('createthd');
     }
     
-  
 }
 
