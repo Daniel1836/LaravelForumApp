@@ -7,10 +7,8 @@ use Illuminate\Support\Facades\Schema;
 class CreateRepliesTable extends Migration
     
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
+    /*
+      Run the migrations.
      */
     
     public function up()
@@ -26,14 +24,13 @@ class CreateRepliesTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
+    /*
+      Reverse the migrations.
      */
+    
     public function down()
         
     {
-        Schema::dropIfExists('');
+        Schema::dropIfExists('replies');
     }
 }
