@@ -1,9 +1,12 @@
 <?php
 
 /*
-Add Seed Data to Databade
+Add Seed Data to Database
 */
 
+/*
+Create Users
+*/
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -16,6 +19,10 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+/*
+Create Threads
+*/
+
 $factory->define(App\Thread::class, function ($faker) {
     return [
         'user_id' => function () {
@@ -26,6 +33,9 @@ $factory->define(App\Thread::class, function ($faker) {
     ];
 });
 
+/*
+Create Replies
+*/
 
 $factory->define(App\Reply::class, function ($faker) {
     return [
