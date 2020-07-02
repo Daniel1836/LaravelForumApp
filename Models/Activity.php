@@ -10,12 +10,21 @@ use Illuminate\Database\Eloquent\Model;
 class Activity extends Model
   
 {
+  
+  /*
+     Don't auto-apply mass assignment protection.
+   */
+  
   protected $guarded = [];
   
   public function subject()
   {
       return $this->morphTo();
   }
+  
+  /*
+  Set Date format
+     */
     
    public function getDateFormat()
      
