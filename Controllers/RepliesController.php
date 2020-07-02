@@ -38,6 +38,10 @@ class RepliesController extends Controller
             return back();
      }
     
+       /*
+         Delete a Reply
+     */
+       
     public function destroy(Reply $reply)
         
     {
