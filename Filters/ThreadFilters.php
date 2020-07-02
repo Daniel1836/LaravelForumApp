@@ -4,10 +4,12 @@ namespace App\Filters;
 
 use App\User;
 
-
 class ThreadFilters extends Filters
     
 {
+      /*
+    Registered filters to operate upon.
+    */
     
   protected $filters = ['by', 'popular', 'unanswered'];
   
@@ -22,6 +24,7 @@ class ThreadFilters extends Filters
             
             return $this->builder->where('user_id', $user->id);
   }
+    
          /*
     Filter the query by most popular threads
     */
@@ -32,6 +35,10 @@ class ThreadFilters extends Filters
         $this->builder->getQuery()->orders = [];
        return $this->builder->orderBy('replies_count', 'desc');
     }
+    
+         /*
+    Filter the query by unanswered threads
+    */
     
     protected function unanswered()
     
