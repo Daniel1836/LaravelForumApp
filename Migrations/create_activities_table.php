@@ -7,10 +7,8 @@ use Illuminate\Support\Facades\Schema;
 class CreateActivitiesTable extends Migration
     
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
+    /*
+      Run the migrations.
      */
     public function up()
         
@@ -23,18 +21,16 @@ class CreateActivitiesTable extends Migration
             $table->string('subject_type', 50);
             $table->string('type', 50);
             $table->timestamps();
-            
+           
            });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
+    /*
+      Reverse the migrations.
      */
     public function down()
         
     {
-        Schema::dropIfExists('');
+        Schema::dropIfExists('activities');
     }
 }
