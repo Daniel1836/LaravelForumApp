@@ -7,10 +7,8 @@ use Illuminate\Support\Facades\Schema;
 class CreateChannelsTable extends Migration
     
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
+    /*
+      Run the migrations.
      */
     public function up()
         
@@ -24,15 +22,13 @@ class CreateChannelsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
+    /*
+      Reverse the migrations.
      */
     
     public function down()
         
     {
-        Schema::dropIfExists('');
+        Schema::dropIfExists('channels');
     }
 }
