@@ -8,7 +8,6 @@ use App\Channel;
 use App\Filters\ThreadFilters;
 use Carbon\Carbon;
 
-
 class ThreadsController extends Controller
 
 {
