@@ -22,8 +22,8 @@ class Thread extends Model
     
     protected $with = ['creator', 'channel'];
     
-    /**
-     * Boot the model.
+    /*
+      Boot the model.
      */
     
     protected static function boot()
