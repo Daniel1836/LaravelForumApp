@@ -29,11 +29,19 @@ class User extends Authenticatable
         return 'name';
     }
     
+       /*
+   A user has many threads
+    */
+    
     public function threads()
     
     {
         return $this->hasMany(Thread::class)->latest();
     }
+    
+       /*
+    A user has many activities
+    */
     
     public function activity()
     
