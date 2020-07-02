@@ -23,6 +23,10 @@ class Reply extends Model
      
        protected $with = ['owner'];
        
+      /*
+  Set Date format
+    */
+    
     public function getDateFormat()
          
 {
@@ -40,7 +44,11 @@ public function owner()
 {
     return $this->belongsTo(User::class, 'user_id');
 }
-
+     
+      /*
+    A reply can be favorited
+    */
+    
 public function favorites()
 
 {
@@ -73,23 +81,40 @@ public function isFavorited()
     return !! $this->favorites->where('user_id', auth()->id())->count();
 }
 
+        /*
+    Count Favorites
+    */
+     
 public function getFavoritesCountAttribute()
 
 {
     return $this->favorites->count();
 }
 
+      /*
+    A reply belongs to a thread
+    */
+    
 public function thread()
 
 {
     return $this->belongsTo(Thread::class);
 }
+     
+        /*
+    Get a string path for the reply
+    */
+     
  public function path()
  
  {
      return $this->thread->path() . "#reply-{$this->id}";
  }
     
+      /*
+      Boot the model.
+     */
+     
     protected static function boot()
     
     {
