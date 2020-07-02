@@ -55,6 +55,7 @@ trait RecordsActivity{
             'type' => $this->getActivityType($event)
             ]);
        }
+    
     /*
     Determine the activity type.
     */
