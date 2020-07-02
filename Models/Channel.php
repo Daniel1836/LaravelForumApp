@@ -14,6 +14,10 @@ class Channel extends Model
         return 'slug';
     }
     
+       /*
+   A Channel has many threads
+    */
+    
     public function threads()
         
     {
