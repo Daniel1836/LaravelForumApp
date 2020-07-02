@@ -82,6 +82,10 @@ class Thread extends Model
         $this->replies()->create($reply);
     }
     
+     /*
+    A thread belongs to a channel
+    */
+    
     public function channel()
         
     {
@@ -97,6 +101,11 @@ class Thread extends Model
     {
         return $filters->apply($query);
     }
+    
+     /*
+  Set Date format
+    */
+    
     
      public function getDateFormat()
          
