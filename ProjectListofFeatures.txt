@@ -7,7 +7,7 @@
 -Pagination of pages with multiple posts
 -Users Profiles have recent Activity (likes, replies, posts)
 -Browse Threads by: (All threads, My threads (Current User), Most replied to, Unreplied threads) [ordered by latest]
--Make Post to sub-forum categories [Organized into 'programming language' categories]
+-Make Post to sub-forum categories ('Web Development' Message board is divided into 'programming languages' categories)
 -All posts, replies and likes are timestamped (created at) and displayed dynamically on User Profile
 -Browse by SubForum Category
 -Post validation
