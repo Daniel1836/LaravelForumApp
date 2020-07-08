@@ -5,9 +5,9 @@
 -View Threads and Replies
 -Delete Threads and Replies
 -Pagination of pages with multiple posts
--Users Profiles have recent Activity (likes, replies, posts)
+-Users Profiles have recent user activity (likes, replies, posts)
 -Browse Threads by: (All threads, My threads (Current User), Most replied to, Unreplied threads) [ordered by latest]
--Make Post to sub-forum categories ('Web Development' Message board is divided into 'programming languages' categories)
+-Make Post to sub-forum categories 
 -All posts, replies and likes are timestamped (created at) and displayed dynamically on User Profile
 -Browse by SubForum Category
 -Post validation
