@@ -1,14 +1,14 @@
 -Register User (Users must be registered/logged in to use features and functional interaction of the App)
--Create Threads (in subforum categories)
+-Create Threads (in subforum channel)
 -Reply to Threads
--Favourite Replies
 -View Threads and Replies
+-Favourite Replies
 -Delete Threads and Replies
 -Pagination of pages with multiple posts
--Users Profiles have recent user activity (likes, replies, posts)
--Browse Threads by: (All threads, My threads (Current User), Most replied to, Unreplied threads) [ordered by latest]
--All posts, replies and likes are timestamped (created at) and displayed dynamically on User Profile
--Browse by SubForum Category
+-Users Profiles have recent user activity (favourites, replies, posts)
+-All posts, replies, favourites and log in are timestamped (created at) and displayed dynamically on User Profile
+-Browse Threads by: (All threads, My threads [Current User], Most replied to, Unreplied threads) [ordered by latest]
+-Browse Threads by SubForum Channel
 -Post validation
 -Logout
 
